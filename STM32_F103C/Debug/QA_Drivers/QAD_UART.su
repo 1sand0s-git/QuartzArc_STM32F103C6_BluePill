@@ -1,0 +1,22 @@
+QAD_UARTMgr.hpp:115:22:static QAD_UARTMgr& QAD_UARTMgr::get()	8	static
+QAD_UARTMgr.hpp:127:24:static QAD_UART_State QAD_UARTMgr::getState(QAD_UART_Periph)	16	static
+QAD_UARTMgr.hpp:137:24:static USART_TypeDef* QAD_UARTMgr::getInstance(QAD_UART_Periph)	16	static
+QAD_UARTMgr.hpp:147:19:static IRQn_Type QAD_UARTMgr::getIRQ(QAD_UART_Periph)	16	static
+QAD_UARTMgr.hpp:161:19:static QA_Result QAD_UARTMgr::registerUART(QAD_UART_Periph)	16	static
+QAD_UARTMgr.hpp:167:14:static void QAD_UARTMgr::deregisterUART(QAD_UART_Periph)	16	static
+QAD_UARTMgr.hpp:177:14:static void QAD_UARTMgr::enableClock(QAD_UART_Periph)	16	static
+QAD_UARTMgr.hpp:183:14:static void QAD_UARTMgr::disableClock(QAD_UART_Periph)	16	static
+QAD_UART.cpp:41:11:QA_Result QAD_UART::init()	24	static
+QAD_UART.cpp:66:6:void QAD_UART::deinit()	16	static
+QAD_UART.cpp:84:14:QA_InitState QAD_UART::getState()	16	static
+QAD_UART.cpp:93:21:UART_HandleTypeDef& QAD_UART::getHandle()	16	static
+QAD_UART.cpp:105:6:void QAD_UART::startTX()	16	static
+QAD_UART.cpp:119:6:void QAD_UART::stopTX()	16	static
+QAD_UART.cpp:134:16:QA_ActiveState QAD_UART::getTXState()	16	static
+QAD_UART.cpp:145:6:void QAD_UART::startRX()	16	static
+QAD_UART.cpp:159:6:void QAD_UART::stopRX()	16	static
+QAD_UART.cpp:174:16:QA_ActiveState QAD_UART::getRXState()	16	static
+QAD_UART.cpp:190:6:void QAD_UART::dataTX(uint8_t)	16	static
+QAD_UART.cpp:202:9:uint8_t QAD_UART::dataRX()	16	static
+QAD_UART.cpp:220:11:QA_Result QAD_UART::periphInit()	32	static
+QAD_UART.cpp:281:6:void QAD_UART::periphDeinit(QAD_UART::DeinitMode)	16	static

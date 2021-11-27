@@ -20,6 +20,7 @@
 #include "boot.hpp"
 
 #include "QAD_GPIO.hpp"
+#include "QAD_EXTI.hpp"
 
 
 	//------------------------------------------

@@ -488,3 +488,639 @@ Finished building: STM32_F103C.bin
  
 Finished building: STM32_F103C.list
  
+09:49:12 **** Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-g++ "../QA_Drivers/QAD_EXTI.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_EXTI.d" -MT"QA_Drivers/QAD_EXTI.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_EXTI.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_GPIO.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_GPIO.d" -MT"QA_Drivers/QAD_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_GPIO.o"
+arm-none-eabi-g++ "../Core/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/main.d" -MT"Core/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/main.o"
+../QA_Drivers/QAD_EXTI.cpp: In member function 'void QAD_EXTI::enable()':
+../QA_Drivers/QAD_EXTI.cpp:180:32: error: 'QAD_IRQPRIORITY_EXTI' was not declared in this scope
+  180 |   HAL_NVIC_SetPriority(m_eIRQ, QAD_IRQPRIORITY_EXTI, 0);
+      |                                ^~~~~~~~~~~~~~~~~~~~
+make: *** [QA_Drivers/subdir.mk:22: QA_Drivers/QAD_EXTI.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:49:44 **** Incremental Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-g++ "../QA_Drivers/QAD_EXTI.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_EXTI.d" -MT"QA_Drivers/QAD_EXTI.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_EXTI.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_GPIO.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_GPIO.d" -MT"QA_Drivers/QAD_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_GPIO.o"
+arm-none-eabi-g++ "../Core/boot.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/boot.d" -MT"Core/boot.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/boot.o"
+arm-none-eabi-g++ "../Core/handlers.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/handlers.d" -MT"Core/handlers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/handlers.o"
+arm-none-eabi-g++ "../Core/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/main.d" -MT"Core/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/main.o"
+arm-none-eabi-g++ -o "STM32_F103C.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\binar\Desktop\Quartz Arc\QA Codebase Repos\QA_STM32F103C6_BLUEPILL\QuartzArc_STM32F103C6_BluePill\STM32_F103C\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32_F103C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: STM32_F103C.elf
+ 
+arm-none-eabi-size   STM32_F103C.elf 
+arm-none-eabi-objdump -h -S  STM32_F103C.elf  > "STM32_F103C.list"
+arm-none-eabi-objcopy  -O binary  STM32_F103C.elf  "STM32_F103C.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5912	    120	   1608	   7640	   1dd8	STM32_F103C.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32_F103C.bin
+ 
+Finished building: STM32_F103C.list
+ 
+10:23:47 **** Clean-only build of configuration Debug for project STM32_F103C ****
+make -j8 clean 
+rm -rf  STM32_F103C.list  ./Core/Startup/startup_stm32f103c6tx.d  ./Drivers/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.d  ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_crc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dac.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rtc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.d  ./Core/syscalls.d ./Core/sysmem.d ./Core/system_stm32f1xx.d  STM32_F103C.bin  default.size.stdout  STM32_F103C.elf  ./QA_Drivers/QAD_EXTI.o ./QA_Drivers/QAD_GPIO.o  ./Drivers/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o  ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_crc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dac.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rtc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.o  ./Core/Startup/startup_stm32f103c6tx.o  ./Core/boot.o ./Core/handlers.o ./Core/main.o ./Core/syscalls.o ./Core/sysmem.o ./Core/system_stm32f1xx.o  ./QA_Drivers/QAD_EXTI.d ./QA_Drivers/QAD_GPIO.d  ./Core/boot.d ./Core/handlers.d ./Core/main.d  STM32_F103C.elf
+ 
+10:23:47 **** Incremental Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-g++ "../QA_Tools/QAT_FIFO.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Tools/QAT_FIFO.d" -MT"QA_Tools/QAT_FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Tools/QAT_FIFO.o"
+arm-none-eabi-g++ "../QA_Systems/QAS_Serial/QAS_Serial_Dev_Base.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Systems/QAS_Serial/QAS_Serial_Dev_Base.d" -MT"QA_Systems/QAS_Serial/QAS_Serial_Dev_Base.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Systems/QAS_Serial/QAS_Serial_Dev_Base.o"
+arm-none-eabi-g++ "../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.d" -MT"QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_PeripheralManagers/QAD_UARTMgr.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_PeripheralManagers/QAD_UARTMgr.d" -MT"QA_Drivers/QAD_PeripheralManagers/QAD_UARTMgr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_PeripheralManagers/QAD_UARTMgr.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_EXTI.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_EXTI.d" -MT"QA_Drivers/QAD_EXTI.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_EXTI.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_GPIO.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_GPIO.d" -MT"QA_Drivers/QAD_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_GPIO.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_UART.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_UART.d" -MT"QA_Drivers/QAD_UART.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_UART.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o"
+In file included from ../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:19:
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:37:2: error: 'QAD_UART_InitStruct' does not name a type
+   37 |  QAD_UART_InitStruct sUART_Init;     //QAD_UART_InitStruct containing details for setup of UART peripheral (as defined in QAD_UART.hpp)
+      |  ^~~~~~~~~~~~~~~~~~~
+In file included from ../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:19:
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:55:56: error: expected class-name before '{' token
+   55 | class QAS_Serial_Dev_UART : public QAS_Serial_Dev_Base {
+      |                                                        ^
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:58:2: error: 'QAD_UART_Periph' does not name a type
+   58 |  QAD_UART_Periph           m_ePeriph;  //UART peripheral to be used (member of QAD_UART_Periph, as defined in QAD_UARTMgr.hpp)
+      |  ^~~~~~~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:60:7: error: 'unique_ptr' in namespace 'std' does not name a template type
+   60 |  std::unique_ptr<QAD_UART> m_pUART;    //Pointer to QAD_UART device class
+      |       ^~~~~~~~~~
+In file included from ../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:19:
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:24:1: note: 'std::unique_ptr' is defined in header '<memory>'; did you forget to '#include <memory>'?
+   23 | #include "setup.hpp"
+  +++ |+#include <memory>
+   24 | 
+In file included from ../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:19:
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:83:13: error: 'QA_Result QAS_Serial_Dev_UART::imp_init(void*)' marked 'override', but does not override
+   83 |   QA_Result imp_init(void* p) override;
+      |             ^~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:84:8: error: 'void QAS_Serial_Dev_UART::imp_deinit()' marked 'override', but does not override
+   84 |   void imp_deinit(void) override;
+      |        ^~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:90:8: error: 'void QAS_Serial_Dev_UART::imp_handler(void*)' marked 'override', but does not override
+   90 |   void imp_handler(void* p) override;
+      |        ^~~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:96:8: error: 'void QAS_Serial_Dev_UART::imp_txStart()' marked 'override', but does not override
+   96 |   void imp_txStart(void) override;
+      |        ^~~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:97:8: error: 'void QAS_Serial_Dev_UART::imp_txStop()' marked 'override', but does not override
+   97 |   void imp_txStop(void) override;
+      |        ^~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:98:8: error: 'void QAS_Serial_Dev_UART::imp_rxStart()' marked 'override', but does not override
+   98 |   void imp_rxStart(void) override;
+      |        ^~~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:99:8: error: 'void QAS_Serial_Dev_UART::imp_rxStop()' marked 'override', but does not override
+   99 |   void imp_rxStop(void) override;
+      |        ^~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp: In constructor 'QAS_Serial_Dev_UART::QAS_Serial_Dev_UART(QAS_Serial_Dev_UART_InitStruct&)':
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:71:4: error: class 'QAS_Serial_Dev_UART' does not have any field named 'QAS_Serial_Dev_Base'
+   71 |    QAS_Serial_Dev_Base(sInit.uTXFIFO_Size, sInit.uRXFIFO_Size, DT_UART),
+      |    ^~~~~~~~~~~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:71:64: error: 'DT_UART' was not declared in this scope
+   71 |    QAS_Serial_Dev_Base(sInit.uTXFIFO_Size, sInit.uRXFIFO_Size, DT_UART),
+      |                                                                ^~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:72:3: error: class 'QAS_Serial_Dev_UART' does not have any field named 'm_ePeriph'
+   72 |   m_ePeriph(sInit.sUART_Init.uart),
+      |   ^~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:72:19: error: 'struct QAS_Serial_Dev_UART_InitStruct' has no member named 'sUART_Init'
+   72 |   m_ePeriph(sInit.sUART_Init.uart),
+      |                   ^~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:73:3: error: class 'QAS_Serial_Dev_UART' does not have any field named 'm_pUART'
+   73 |   m_pUART(std::make_unique<QAD_UART>(sInit.sUART_Init)) {}
+      |   ^~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:73:16: error: 'make_unique' is not a member of 'std'
+   73 |   m_pUART(std::make_unique<QAD_UART>(sInit.sUART_Init)) {}
+      |                ^~~~~~~~~~~
+In file included from ../QA_Drivers/QAD_UART.cpp:24:
+../QA_Drivers/QAD_UART.hpp:42:3: error: 'QAD_UART_Periph' does not name a type
+   42 |   QAD_UART_Periph uart;         //UART peripheral to be used (member of QAD_UART_Periph, as defined in QAD_UARTMgr.hpp)
+      |   ^~~~~~~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:73:16: note: 'std::make_unique' is defined in header '<memory>'; did you forget to '#include <memory>'?
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:73:28: error: 'QAD_UART' was not declared in this scope
+   73 |   m_pUART(std::make_unique<QAD_UART>(sInit.sUART_Init)) {}
+      |                            ^~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:73:44: error: 'struct QAS_Serial_Dev_UART_InitStruct' has no member named 'sUART_Init'
+   73 |   m_pUART(std::make_unique<QAD_UART>(sInit.sUART_Init)) {}
+      |                                            ^~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp: In member function 'QA_Result QAS_Serial_Dev_UART::imp_init(void*)':
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:37:9: error: 'm_pUART' was not declared in this scope
+   37 |  return m_pUART->init();
+      |         ^~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp: In member function 'void QAS_Serial_Dev_UART::imp_deinit()':
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:46:3: error: 'm_pUART' was not declared in this scope
+   46 |   m_pUART->deinit();
+      |   ^~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp: In member function 'void QAS_Serial_Dev_UART::imp_handler(void*)':
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:59:32: error: 'm_pUART' was not declared in this scope
+   59 |   UART_HandleTypeDef pHandle = m_pUART->getHandle();
+      |                                ^~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:64:8: error: 'm_eRXState' was not declared in this scope
+   64 |    if (m_eRXState)
+      |        ^~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:65:5: error: 'm_pRXFIFO' was not declared in this scope
+   65 |     m_pRXFIFO->push(uData);
+      |     ^~~~~~~~~
+In file included from ../QA_Drivers/QAD_UART.cpp:24:
+../QA_Drivers/QAD_UART.hpp:79:2: error: 'QAD_UART_Periph' does not name a type
+   79 |  QAD_UART_Periph    m_eUART;          //Stores the particular UART peripheral being used by the driver
+      |  ^~~~~~~~~~~~~~~
+../QA_Drivers/QAD_UART.hpp: In constructor 'QAD_UART::QAD_UART(QAD_UART_InitStruct&)':
+../QA_Drivers/QAD_UART.hpp:107:3: error: class 'QAD_UART' does not have any field named 'm_eUART'
+  107 |   m_eUART(pInit.uart),
+      |   ^~~~~~~
+../QA_Drivers/QAD_UART.hpp:107:17: error: 'struct QAD_UART_InitStruct' has no member named 'uart'
+  107 |   m_eUART(pInit.uart),
+      |                 ^~~~
+../QA_Drivers/QAD_UART.cpp: In member function 'QA_Result QAD_UART::init()':
+../QA_Drivers/QAD_UART.cpp:44:6: error: 'QAD_UARTMgr' has not been declared
+   44 |  if (QAD_UARTMgr::getState(m_eUART))
+      |      ^~~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:71:9: error: 'm_pTXFIFO' was not declared in this scope
+   71 |    if (!m_pTXFIFO->empty()) {
+      |         ^~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:44:28: error: 'm_eUART' was not declared in this scope
+   44 |  if (QAD_UARTMgr::getState(m_eUART))
+      |                            ^~~~~~~
+../QA_Drivers/QAD_UART.cpp:48:3: error: 'QAD_UARTMgr' has not been declared
+   48 |   QAD_UARTMgr::registerUART(m_eUART);
+      |   ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:48:29: error: 'm_eUART' was not declared in this scope
+   48 |   QAD_UARTMgr::registerUART(m_eUART);
+      |                             ^~~~~~~
+../QA_Drivers/QAD_UART.cpp:55:4: error: 'QAD_UARTMgr' has not been declared
+   55 |    QAD_UARTMgr::deregisterUART(m_eUART);
+      |    ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp: In member function 'void QAD_UART::deinit()':
+../QA_Drivers/QAD_UART.cpp:76:3: error: 'QAD_UARTMgr' has not been declared
+   76 |   QAD_UARTMgr::deregisterUART(m_eUART);
+      |   ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:76:31: error: 'm_eUART' was not declared in this scope
+   76 |   QAD_UARTMgr::deregisterUART(m_eUART);
+      |                               ^~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:75:7: error: 'm_eTXState' was not declared in this scope
+   75 |       m_eTXState = QA_Inactive;
+      |       ^~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp: In member function 'void QAS_Serial_Dev_UART::imp_txStart()':
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:90:3: error: 'm_pUART' was not declared in this scope
+   90 |   m_pUART->startTX();
+      |   ^~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp: In member function 'void QAS_Serial_Dev_UART::imp_txStop()':
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:99:3: error: 'm_pUART' was not declared in this scope
+   99 |   m_pUART->stopTX();
+      |   ^~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp: In member function 'void QAS_Serial_Dev_UART::imp_rxStart()':
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:108:3: error: 'm_pUART' was not declared in this scope
+  108 |   m_pUART->startRX();
+      |   ^~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp: In member function 'void QAS_Serial_Dev_UART::imp_rxStop()':
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:117:3: error: 'm_pUART' was not declared in this scope
+  117 |   m_pUART->stopRX();
+      |   ^~~~~~~
+../QA_Drivers/QAD_UART.cpp: In member function 'QA_Result QAD_UART::periphInit()':
+../QA_Drivers/QAD_UART.cpp:227:24: error: 'GPIO_SPEED_FREQ_VERY_HIGH' was not declared in this scope; did you mean 'GPIO_SPEED_FREQ_HIGH'?
+  227 |  GPIO_Init.Speed     = GPIO_SPEED_FREQ_VERY_HIGH;  //Set GPIO pin speed
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                        GPIO_SPEED_FREQ_HIGH
+../QA_Drivers/QAD_UART.cpp:228:12: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  228 |  GPIO_Init.Alternate = m_uTXAF;                    //Set alternate function to suit required UART peripheral
+      |            ^~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:236:12: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  236 |  GPIO_Init.Alternate = m_uRXAF;                    //Set alternate function to suit required UART peripheral
+      |            ^~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:241:2: error: 'QAD_UARTMgr' has not been declared
+  241 |  QAD_UARTMgr::enableClock(m_eUART);
+      |  ^~~~~~~~~~~
+make: *** [QA_Systems/QAS_Serial/subdir.mk:22: QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.o] Error 1
+make: *** Waiting for unfinished jobs....
+../QA_Drivers/QAD_UART.cpp:241:27: error: 'm_eUART' was not declared in this scope
+  241 |  QAD_UARTMgr::enableClock(m_eUART);
+      |                           ^~~~~~~
+../QA_Drivers/QAD_UART.cpp:244:35: error: 'QAD_UARTMgr' has not been declared
+  244 |  m_sHandle.Instance             = QAD_UARTMgr::getInstance(m_eUART); //Set instance for required UART peripheral
+      |                                   ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:261:23: error: 'QAD_UARTMgr' has not been declared
+  261 |  HAL_NVIC_SetPriority(QAD_UARTMgr::getIRQ(m_eUART), m_uIRQPriority, 0x00);
+      |                       ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:262:21: error: 'QAD_UARTMgr' has not been declared
+  262 |  HAL_NVIC_EnableIRQ(QAD_UARTMgr::getIRQ(m_eUART));
+      |                     ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp: In member function 'void QAD_UART::periphDeinit(QAD_UART::DeinitMode)':
+../QA_Drivers/QAD_UART.cpp:289:23: error: 'QAD_UARTMgr' has not been declared
+  289 |   HAL_NVIC_DisableIRQ(QAD_UARTMgr::getIRQ(m_eUART)); //Disable overall UART IRQ
+      |                       ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:289:43: error: 'm_eUART' was not declared in this scope
+  289 |   HAL_NVIC_DisableIRQ(QAD_UARTMgr::getIRQ(m_eUART)); //Disable overall UART IRQ
+      |                                           ^~~~~~~
+../QA_Drivers/QAD_UART.cpp:300:2: error: 'QAD_UARTMgr' has not been declared
+  300 |  QAD_UARTMgr::disableClock(m_eUART);
+      |  ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:300:28: error: 'm_eUART' was not declared in this scope
+  300 |  QAD_UARTMgr::disableClock(m_eUART);
+      |                            ^~~~~~~
+make: *** [QA_Drivers/subdir.mk:25: QA_Drivers/QAD_UART.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:24:17 **** Incremental Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-g++ "../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.d" -MT"QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_UART.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_UART.d" -MT"QA_Drivers/QAD_UART.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_UART.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+In file included from ../QA_Drivers/QAD_UART.cpp:24:
+../QA_Drivers/QAD_UART.hpp:42:3: error: 'QAD_UART_Periph' does not name a type
+   42 |   QAD_UART_Periph uart;         //UART peripheral to be used (member of QAD_UART_Periph, as defined in QAD_UARTMgr.hpp)
+      |   ^~~~~~~~~~~~~~~
+In file included from ../QA_Drivers/QAD_UART.cpp:24:
+../QA_Drivers/QAD_UART.hpp:79:2: error: 'QAD_UART_Periph' does not name a type
+   79 |  QAD_UART_Periph    m_eUART;          //Stores the particular UART peripheral being used by the driver
+      |  ^~~~~~~~~~~~~~~
+../QA_Drivers/QAD_UART.hpp: In constructor 'QAD_UART::QAD_UART(QAD_UART_InitStruct&)':
+../QA_Drivers/QAD_UART.hpp:107:3: error: class 'QAD_UART' does not have any field named 'm_eUART'
+  107 |   m_eUART(pInit.uart),
+      |   ^~~~~~~
+../QA_Drivers/QAD_UART.hpp:107:17: error: 'struct QAD_UART_InitStruct' has no member named 'uart'
+  107 |   m_eUART(pInit.uart),
+      |                 ^~~~
+../QA_Drivers/QAD_UART.cpp: In member function 'QA_Result QAD_UART::init()':
+../QA_Drivers/QAD_UART.cpp:44:6: error: 'QAD_UARTMgr' has not been declared
+   44 |  if (QAD_UARTMgr::getState(m_eUART))
+      |      ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:44:28: error: 'm_eUART' was not declared in this scope
+   44 |  if (QAD_UARTMgr::getState(m_eUART))
+      |                            ^~~~~~~
+../QA_Drivers/QAD_UART.cpp:48:3: error: 'QAD_UARTMgr' has not been declared
+   48 |   QAD_UARTMgr::registerUART(m_eUART);
+      |   ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:48:29: error: 'm_eUART' was not declared in this scope
+   48 |   QAD_UARTMgr::registerUART(m_eUART);
+      |                             ^~~~~~~
+../QA_Drivers/QAD_UART.cpp:55:4: error: 'QAD_UARTMgr' has not been declared
+   55 |    QAD_UARTMgr::deregisterUART(m_eUART);
+      |    ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp: In member function 'void QAD_UART::deinit()':
+../QA_Drivers/QAD_UART.cpp:76:3: error: 'QAD_UARTMgr' has not been declared
+   76 |   QAD_UARTMgr::deregisterUART(m_eUART);
+      |   ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:76:31: error: 'm_eUART' was not declared in this scope
+   76 |   QAD_UARTMgr::deregisterUART(m_eUART);
+      |                               ^~~~~~~
+../QA_Drivers/QAD_UART.cpp: In member function 'QA_Result QAD_UART::periphInit()':
+../QA_Drivers/QAD_UART.cpp:227:24: error: 'GPIO_SPEED_FREQ_VERY_HIGH' was not declared in this scope; did you mean 'GPIO_SPEED_FREQ_HIGH'?
+  227 |  GPIO_Init.Speed     = GPIO_SPEED_FREQ_VERY_HIGH;  //Set GPIO pin speed
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                        GPIO_SPEED_FREQ_HIGH
+../QA_Drivers/QAD_UART.cpp:228:12: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  228 |  GPIO_Init.Alternate = m_uTXAF;                    //Set alternate function to suit required UART peripheral
+      |            ^~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:236:12: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  236 |  GPIO_Init.Alternate = m_uRXAF;                    //Set alternate function to suit required UART peripheral
+      |            ^~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:241:2: error: 'QAD_UARTMgr' has not been declared
+  241 |  QAD_UARTMgr::enableClock(m_eUART);
+      |  ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:241:27: error: 'm_eUART' was not declared in this scope
+  241 |  QAD_UARTMgr::enableClock(m_eUART);
+      |                           ^~~~~~~
+../QA_Drivers/QAD_UART.cpp:244:35: error: 'QAD_UARTMgr' has not been declared
+  244 |  m_sHandle.Instance             = QAD_UARTMgr::getInstance(m_eUART); //Set instance for required UART peripheral
+      |                                   ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:261:23: error: 'QAD_UARTMgr' has not been declared
+  261 |  HAL_NVIC_SetPriority(QAD_UARTMgr::getIRQ(m_eUART), m_uIRQPriority, 0x00);
+      |                       ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:262:21: error: 'QAD_UARTMgr' has not been declared
+  262 |  HAL_NVIC_EnableIRQ(QAD_UARTMgr::getIRQ(m_eUART));
+      |                     ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp: In member function 'void QAD_UART::periphDeinit(QAD_UART::DeinitMode)':
+../QA_Drivers/QAD_UART.cpp:289:23: error: 'QAD_UARTMgr' has not been declared
+  289 |   HAL_NVIC_DisableIRQ(QAD_UARTMgr::getIRQ(m_eUART)); //Disable overall UART IRQ
+      |                       ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:289:43: error: 'm_eUART' was not declared in this scope
+  289 |   HAL_NVIC_DisableIRQ(QAD_UARTMgr::getIRQ(m_eUART)); //Disable overall UART IRQ
+      |                                           ^~~~~~~
+../QA_Drivers/QAD_UART.cpp:300:2: error: 'QAD_UARTMgr' has not been declared
+  300 |  QAD_UARTMgr::disableClock(m_eUART);
+      |  ^~~~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:300:28: error: 'm_eUART' was not declared in this scope
+  300 |  QAD_UARTMgr::disableClock(m_eUART);
+      |                            ^~~~~~~
+make: *** [QA_Drivers/subdir.mk:25: QA_Drivers/QAD_UART.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:30,
+                 from ../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:19:
+../QA_Drivers/QAD_UART.hpp:42:3: error: 'QAD_UART_Periph' does not name a type
+   42 |   QAD_UART_Periph uart;         //UART peripheral to be used (member of QAD_UART_Periph, as defined in QAD_UARTMgr.hpp)
+      |   ^~~~~~~~~~~~~~~
+In file included from ../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:30,
+                 from ../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:19:
+../QA_Drivers/QAD_UART.hpp:79:2: error: 'QAD_UART_Periph' does not name a type
+   79 |  QAD_UART_Periph    m_eUART;          //Stores the particular UART peripheral being used by the driver
+      |  ^~~~~~~~~~~~~~~
+../QA_Drivers/QAD_UART.hpp: In constructor 'QAD_UART::QAD_UART(QAD_UART_InitStruct&)':
+../QA_Drivers/QAD_UART.hpp:107:3: error: class 'QAD_UART' does not have any field named 'm_eUART'
+  107 |   m_eUART(pInit.uart),
+      |   ^~~~~~~
+../QA_Drivers/QAD_UART.hpp:107:17: error: 'struct QAD_UART_InitStruct' has no member named 'uart'
+  107 |   m_eUART(pInit.uart),
+      |                 ^~~~
+In file included from ../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp:19:
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp: At global scope:
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:65:2: error: 'QAD_UART_Periph' does not name a type
+   65 |  QAD_UART_Periph           m_ePeriph;  //UART peripheral to be used (member of QAD_UART_Periph, as defined in QAD_UARTMgr.hpp)
+      |  ^~~~~~~~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp: In constructor 'QAS_Serial_Dev_UART::QAS_Serial_Dev_UART(QAS_Serial_Dev_UART_InitStruct&)':
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:79:3: error: class 'QAS_Serial_Dev_UART' does not have any field named 'm_ePeriph'
+   79 |   m_ePeriph(sInit.sUART_Init.uart),
+      |   ^~~~~~~~~
+../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.hpp:79:30: error: 'struct QAD_UART_InitStruct' has no member named 'uart'
+   79 |   m_ePeriph(sInit.sUART_Init.uart),
+      |                              ^~~~
+make: *** [QA_Systems/QAS_Serial/subdir.mk:22: QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:25:20 **** Incremental Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-g++ "../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.d" -MT"QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_UART.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_UART.d" -MT"QA_Drivers/QAD_UART.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_UART.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+../QA_Drivers/QAD_UART.cpp: In member function 'QA_Result QAD_UART::periphInit()':
+../QA_Drivers/QAD_UART.cpp:227:24: error: 'GPIO_SPEED_FREQ_VERY_HIGH' was not declared in this scope; did you mean 'GPIO_SPEED_FREQ_HIGH'?
+  227 |  GPIO_Init.Speed     = GPIO_SPEED_FREQ_VERY_HIGH;  //Set GPIO pin speed
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                        GPIO_SPEED_FREQ_HIGH
+../QA_Drivers/QAD_UART.cpp:228:12: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  228 |  GPIO_Init.Alternate = m_uTXAF;                    //Set alternate function to suit required UART peripheral
+      |            ^~~~~~~~~
+../QA_Drivers/QAD_UART.cpp:236:12: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  236 |  GPIO_Init.Alternate = m_uRXAF;                    //Set alternate function to suit required UART peripheral
+      |            ^~~~~~~~~
+make: *** [QA_Drivers/subdir.mk:25: QA_Drivers/QAD_UART.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:27:14 **** Incremental Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-g++ "../QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.d" -MT"QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Systems/QAS_Serial/QAS_Serial_Dev_UART.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_UART.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_UART.d" -MT"QA_Drivers/QAD_UART.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_UART.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_crc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_crc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_crc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_crc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dac.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dac.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dac.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dac.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rtc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rtc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rtc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rtc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.o"
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103c6tx.d" -MT"Core/Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103c6tx.o" "../Core/Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-g++ "../Core/boot.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/boot.d" -MT"Core/boot.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/boot.o"
+arm-none-eabi-g++ "../Core/handlers.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/handlers.d" -MT"Core/handlers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/handlers.o"
+arm-none-eabi-g++ "../Core/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/main.d" -MT"Core/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/main.o"
+arm-none-eabi-gcc "../Core/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/syscalls.d" -MT"Core/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/syscalls.o"
+arm-none-eabi-gcc "../Core/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/sysmem.d" -MT"Core/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/sysmem.o"
+arm-none-eabi-gcc "../Core/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/system_stm32f1xx.d" -MT"Core/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/system_stm32f1xx.o"
+arm-none-eabi-g++ -o "STM32_F103C.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\binar\Desktop\Quartz Arc\QA Codebase Repos\QA_STM32F103C6_BLUEPILL\QuartzArc_STM32F103C6_BluePill\STM32_F103C\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32_F103C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: STM32_F103C.elf
+ 
+arm-none-eabi-size   STM32_F103C.elf 
+arm-none-eabi-objdump -h -S  STM32_F103C.elf  > "STM32_F103C.list"
+arm-none-eabi-objcopy  -O binary  STM32_F103C.elf  "STM32_F103C.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5912	    120	   1608	   7640	   1dd8	STM32_F103C.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32_F103C.bin
+ 
+Finished building: STM32_F103C.list
+ 
+12:35:33 **** Incremental Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-g++ "../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.d" -MT"QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_PeripheralManagers/QAD_UARTMgr.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_PeripheralManagers/QAD_UARTMgr.d" -MT"QA_Drivers/QAD_PeripheralManagers/QAD_UARTMgr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_PeripheralManagers/QAD_UARTMgr.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_EXTI.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_EXTI.d" -MT"QA_Drivers/QAD_EXTI.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_EXTI.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_Encoder.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_Encoder.d" -MT"QA_Drivers/QAD_Encoder.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_Encoder.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_GPIO.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_GPIO.d" -MT"QA_Drivers/QAD_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_GPIO.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_PWM.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_PWM.d" -MT"QA_Drivers/QAD_PWM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_PWM.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_Timer.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_Timer.d" -MT"QA_Drivers/QAD_Timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_Timer.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_UART.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_UART.d" -MT"QA_Drivers/QAD_UART.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_UART.o"
+../QA_Drivers/QAD_Encoder.cpp: In member function 'QA_Result QAD_Encoder::periphInit()':
+../QA_Drivers/QAD_Encoder.cpp:247:13: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  247 |   GPIO_Init.Alternate = m_uCh1_AF;             //Set alternate function to suit required timer peripheral
+      |             ^~~~~~~~~
+../QA_Drivers/QAD_Encoder.cpp:252:13: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  252 |   GPIO_Init.Alternate = m_uCh2_AF;             //Set alternate function to suit required timer peripheral
+      |             ^~~~~~~~~
+../QA_Drivers/QAD_PWM.cpp: In member function 'QA_Result QAD_PWM::periphInit()':
+../QA_Drivers/QAD_PWM.cpp:161:14: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  161 |    GPIO_Init.Alternate   = m_sChannels[i].uAF;  //Set alternate function to suit required timer peripheral
+      |              ^~~~~~~~~
+make: *** [QA_Drivers/subdir.mk:34: QA_Drivers/QAD_Encoder.o] Error 1
+make: *** Waiting for unfinished jobs....
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp: In member function 'void QAD_TimerMgr::imp_enableClock(QAD_Timer_Periph)':
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:196:11: error: 'QAD_Timer4' was not declared in this scope; did you mean 'QAD_Timer3'?
+  196 |     case (QAD_Timer4):
+      |           ^~~~~~~~~~
+      |           QAD_Timer3
+make: *** [QA_Drivers/subdir.mk:34: QA_Drivers/QAD_PWM.o] Error 1
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:197:6: error: '__HAL_RCC_TIM4_CLK_ENABLE' was not declared in this scope; did you mean 'HAL_RCC_MODULE_ENABLED'?
+  197 |      __HAL_RCC_TIM4_CLK_ENABLE();
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |      HAL_RCC_MODULE_ENABLED
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:198:4: error: '__HAL_RCC_TIM4_FORCE_RESET' was not declared in this scope
+  198 |    __HAL_RCC_TIM4_FORCE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:199:4: error: '__HAL_RCC_TIM4_RELEASE_RESET' was not declared in this scope
+  199 |    __HAL_RCC_TIM4_RELEASE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:201:11: error: 'QAD_Timer5' was not declared in this scope; did you mean 'QAD_Timer3'?
+  201 |     case (QAD_Timer5):
+      |           ^~~~~~~~~~
+      |           QAD_Timer3
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:202:6: error: '__HAL_RCC_TIM5_CLK_ENABLE' was not declared in this scope; did you mean 'HAL_RCC_MODULE_ENABLED'?
+  202 |      __HAL_RCC_TIM5_CLK_ENABLE();
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |      HAL_RCC_MODULE_ENABLED
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:203:4: error: '__HAL_RCC_TIM5_FORCE_RESET' was not declared in this scope
+  203 |    __HAL_RCC_TIM5_FORCE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:204:4: error: '__HAL_RCC_TIM5_RELEASE_RESET' was not declared in this scope
+  204 |    __HAL_RCC_TIM5_RELEASE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:206:11: error: 'QAD_Timer9' was not declared in this scope; did you mean 'QAD_Timer3'?
+  206 |     case (QAD_Timer9):
+      |           ^~~~~~~~~~
+      |           QAD_Timer3
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:207:6: error: '__HAL_RCC_TIM9_CLK_ENABLE' was not declared in this scope; did you mean 'HAL_RCC_MODULE_ENABLED'?
+  207 |      __HAL_RCC_TIM9_CLK_ENABLE();
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |      HAL_RCC_MODULE_ENABLED
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:208:4: error: '__HAL_RCC_TIM9_FORCE_RESET' was not declared in this scope
+  208 |    __HAL_RCC_TIM9_FORCE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:209:4: error: '__HAL_RCC_TIM9_RELEASE_RESET' was not declared in this scope
+  209 |    __HAL_RCC_TIM9_RELEASE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:211:11: error: 'QAD_Timer10' was not declared in this scope; did you mean 'QAD_Timer1'?
+  211 |     case (QAD_Timer10):
+      |           ^~~~~~~~~~~
+      |           QAD_Timer1
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:212:6: error: '__HAL_RCC_TIM10_CLK_ENABLE' was not declared in this scope
+  212 |      __HAL_RCC_TIM10_CLK_ENABLE();
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:213:4: error: '__HAL_RCC_TIM10_FORCE_RESET' was not declared in this scope
+  213 |    __HAL_RCC_TIM10_FORCE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:214:4: error: '__HAL_RCC_TIM10_RELEASE_RESET' was not declared in this scope
+  214 |    __HAL_RCC_TIM10_RELEASE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:216:11: error: 'QAD_Timer11' was not declared in this scope; did you mean 'QAD_Timer1'?
+  216 |     case (QAD_Timer11):
+      |           ^~~~~~~~~~~
+      |           QAD_Timer1
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:217:6: error: '__HAL_RCC_TIM11_CLK_ENABLE' was not declared in this scope
+  217 |      __HAL_RCC_TIM11_CLK_ENABLE();
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:218:4: error: '__HAL_RCC_TIM11_FORCE_RESET' was not declared in this scope
+  218 |    __HAL_RCC_TIM11_FORCE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:219:4: error: '__HAL_RCC_TIM11_RELEASE_RESET' was not declared in this scope
+  219 |    __HAL_RCC_TIM11_RELEASE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp: In member function 'void QAD_TimerMgr::imp_disableClock(QAD_Timer_Periph)':
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:244:11: error: 'QAD_Timer4' was not declared in this scope; did you mean 'QAD_Timer3'?
+  244 |     case (QAD_Timer4):
+      |           ^~~~~~~~~~
+      |           QAD_Timer3
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:245:6: error: '__HAL_RCC_TIM4_CLK_DISABLE' was not declared in this scope
+  245 |      __HAL_RCC_TIM4_CLK_DISABLE();
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:247:11: error: 'QAD_Timer5' was not declared in this scope; did you mean 'QAD_Timer3'?
+  247 |     case (QAD_Timer5):
+      |           ^~~~~~~~~~
+      |           QAD_Timer3
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:248:6: error: '__HAL_RCC_TIM5_CLK_DISABLE' was not declared in this scope
+  248 |      __HAL_RCC_TIM5_CLK_DISABLE();
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:250:11: error: 'QAD_Timer9' was not declared in this scope; did you mean 'QAD_Timer3'?
+  250 |     case (QAD_Timer9):
+      |           ^~~~~~~~~~
+      |           QAD_Timer3
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:251:6: error: '__HAL_RCC_TIM9_CLK_DISABLE' was not declared in this scope
+  251 |      __HAL_RCC_TIM9_CLK_DISABLE();
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:253:11: error: 'QAD_Timer10' was not declared in this scope; did you mean 'QAD_Timer1'?
+  253 |     case (QAD_Timer10):
+      |           ^~~~~~~~~~~
+      |           QAD_Timer1
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:254:6: error: '__HAL_RCC_TIM10_CLK_DISABLE' was not declared in this scope
+  254 |      __HAL_RCC_TIM10_CLK_DISABLE();
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:256:11: error: 'QAD_Timer11' was not declared in this scope; did you mean 'QAD_Timer1'?
+  256 |     case (QAD_Timer11):
+      |           ^~~~~~~~~~~
+      |           QAD_Timer1
+../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp:257:6: error: '__HAL_RCC_TIM11_CLK_DISABLE' was not declared in this scope
+  257 |      __HAL_RCC_TIM11_CLK_DISABLE();
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [QA_Drivers/QAD_PeripheralManagers/subdir.mk:22: QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:36:03 **** Incremental Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-g++ "../QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.d" -MT"QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_PeripheralManagers/QAD_TimerMgr.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_Encoder.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_Encoder.d" -MT"QA_Drivers/QAD_Encoder.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_Encoder.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_PWM.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_PWM.d" -MT"QA_Drivers/QAD_PWM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_PWM.o"
+../QA_Drivers/QAD_Encoder.cpp: In member function 'QA_Result QAD_Encoder::periphInit()':
+../QA_Drivers/QAD_Encoder.cpp:247:13: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  247 |   GPIO_Init.Alternate = m_uCh1_AF;             //Set alternate function to suit required timer peripheral
+      |             ^~~~~~~~~
+../QA_Drivers/QAD_Encoder.cpp:252:13: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  252 |   GPIO_Init.Alternate = m_uCh2_AF;             //Set alternate function to suit required timer peripheral
+      |             ^~~~~~~~~
+make: *** [QA_Drivers/subdir.mk:34: QA_Drivers/QAD_Encoder.o] Error 1
+make: *** Waiting for unfinished jobs....
+../QA_Drivers/QAD_PWM.cpp: In member function 'QA_Result QAD_PWM::periphInit()':
+../QA_Drivers/QAD_PWM.cpp:161:14: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  161 |    GPIO_Init.Alternate   = m_sChannels[i].uAF;  //Set alternate function to suit required timer peripheral
+      |              ^~~~~~~~~
+make: *** [QA_Drivers/subdir.mk:34: QA_Drivers/QAD_PWM.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:37:00 **** Incremental Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-g++ "../QA_Drivers/QAD_Encoder.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_Encoder.d" -MT"QA_Drivers/QAD_Encoder.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_Encoder.o"
+arm-none-eabi-g++ "../QA_Drivers/QAD_PWM.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_PWM.d" -MT"QA_Drivers/QAD_PWM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_PWM.o"
+../QA_Drivers/QAD_PWM.cpp: In member function 'QA_Result QAD_PWM::periphInit()':
+../QA_Drivers/QAD_PWM.cpp:161:14: error: 'struct GPIO_InitTypeDef' has no member named 'Alternate'
+  161 |    GPIO_Init.Alternate   = m_sChannels[i].uAF;  //Set alternate function to suit required timer peripheral
+      |              ^~~~~~~~~
+make: *** [QA_Drivers/subdir.mk:34: QA_Drivers/QAD_PWM.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:37:55 **** Incremental Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-g++ "../QA_Drivers/QAD_PWM.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core -I../QA_Drivers -I../QA_Drivers/QAD_PeripheralManagers -I../QA_Systems -I../QA_Systems/QAS_Serial -I../QA_Tools -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"QA_Drivers/QAD_PWM.d" -MT"QA_Drivers/QAD_PWM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "QA_Drivers/QAD_PWM.o"
+arm-none-eabi-g++ -o "STM32_F103C.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\binar\Desktop\Quartz Arc\QA Codebase Repos\QA_STM32F103C6_BLUEPILL\QuartzArc_STM32F103C6_BluePill\STM32_F103C\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32_F103C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: STM32_F103C.elf
+ 
+arm-none-eabi-size   STM32_F103C.elf 
+arm-none-eabi-objdump -h -S  STM32_F103C.elf  > "STM32_F103C.list"
+arm-none-eabi-objcopy  -O binary  STM32_F103C.elf  "STM32_F103C.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5912	    120	   1608	   7640	   1dd8	STM32_F103C.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32_F103C.bin
+ 
+Finished building: STM32_F103C.list
+ 
+12:38:11 **** Incremental Build of configuration Debug for project STM32_F103C ****
+make -j8 all 
+arm-none-eabi-size   STM32_F103C.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5912	    120	   1608	   7640	   1dd8	STM32_F103C.elf
+Finished building: default.size.stdout
+ 

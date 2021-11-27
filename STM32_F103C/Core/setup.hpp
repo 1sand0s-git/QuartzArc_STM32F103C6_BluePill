@@ -90,7 +90,7 @@ public:
 	//----------------------------
 	//Interrupt Request Priorities
 
-
+#define QAD_IRQPRIORITY_EXTI     ((uint8_t) 0x0A) //Priority to be used by external interrupt handlers. Shared by all external interrupts
 
 
 

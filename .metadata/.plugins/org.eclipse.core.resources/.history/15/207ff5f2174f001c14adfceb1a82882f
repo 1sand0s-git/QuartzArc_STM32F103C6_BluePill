@@ -1,0 +1,32 @@
+/* ----------------------------------------------------------------------- */
+/*                                                                         */
+/*   Quartz Arc                                                            */
+/*                                                                         */
+/*   STM32 F103C6 Blue Pill                                                */
+/*                                                                         */
+/*   System: Systems - Serial                                              */
+/*   Role: Serial Device Base Class                                        */
+/*   Filename: QAD_Serial_Dev_Base.hpp                                     */
+/*   Date: 27th November 2021                                              */
+/*   Created By: Benjamin Rosser                                           */
+/*                                                                         */
+/*   This code is covered by Creative Commons CC-BY-NC-SA license          */
+/*   (C) Copyright 2021 Benjamin Rosser                                    */
+/*                                                                         */
+/* ----------------------------------------------------------------------- */
+
+//Prevent Recursive Inclusion
+#ifndef __QAS_SERIAL_DEV_BASE_HPP_
+#define __QAS_SERIAL_DEV_BASE_HPP_
+
+//Includes
+#include "setup.hpp"
+
+
+	//------------------------------------------
+	//------------------------------------------
+	//------------------------------------------
+
+
+//Prevent Recursive Inclusion
+#endif /* __QAS_SERIAL_DEV_BASE_HPP_ */

@@ -32,7 +32,8 @@ Core/main.o: ../Core/main.cpp ../Core/main.hpp ../Core/setup.hpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/boot.hpp ../QA_Drivers/QAD_GPIO.hpp ../Core/setup.hpp
+ ../Core/boot.hpp ../QA_Drivers/QAD_GPIO.hpp ../Core/setup.hpp \
+ ../QA_Drivers/QAD_EXTI.hpp ../QA_Drivers/QAD_GPIO.hpp
 
 ../Core/main.hpp:
 
@@ -109,3 +110,7 @@ Core/main.o: ../Core/main.cpp ../Core/main.hpp ../Core/setup.hpp \
 ../QA_Drivers/QAD_GPIO.hpp:
 
 ../Core/setup.hpp:
+
+../QA_Drivers/QAD_EXTI.hpp:
+
+../QA_Drivers/QAD_GPIO.hpp:

@@ -136,3 +136,21 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-11-14 13:18:06.218
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2021-11-27 09:42:42.432 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_AU
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-11-27 09:43:00.214
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-11-27 09:43:00.277
+!MESSAGE Log4j initialized with config file C:\Users\binar\Desktop\Quartz Arc\QA Codebase Repos\QA_STM32F103C6_BLUEPILL\QuartzArc_STM32F103C6_BluePill\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-11-27 09:43:05.943
+!MESSAGE Started RMI Server, listening on port 41338
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-11-27 09:55:09.550
+!MESSAGE Indexed 'STM32_F103C' (67 sources, 195 headers) in 5.01 sec: 15,778 declarations; 81,446 references; 2 unresolved inclusions; 36 syntax errors; 482 unresolved names (0.49%)
